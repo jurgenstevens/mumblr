@@ -19,6 +19,8 @@ const uri = process.env.ATLAS_URI;
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
+  // S6: added the following option according nodejs instructions to use new Server Discover and Monitoring engine
+  useUnifiedTopology: true,
 });
 
 const connection = mongoose.connection;
