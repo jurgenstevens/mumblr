@@ -29,4 +29,5 @@ connection.once("open", () =>
 );
 
 app.listen(port, () => console.log(`The app is running on Port : ${port}`));
-// Mongoose connection runs without any issues
+// Mongoose server connection runs without any issues
+// Next create the routes
