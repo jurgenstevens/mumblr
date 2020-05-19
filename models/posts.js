@@ -8,8 +8,8 @@ const postSchema = new Schema({
   authorname: { type: String, required: true },
 });
 
-// this will be exported to be used for the routes
+// S8: this will be exported to be used for the routes
 const Posts = mongoose.model("Posts", postSchema);
 
-// here we're exporting
+// S9: here we're exporting and continue onto the routes
 module.export = Posts;
