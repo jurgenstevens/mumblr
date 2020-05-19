@@ -12,3 +12,5 @@ router.get("/", (req, res) => {
     // then we'll catch the error with status 400
     .catch((err) => res.status(400).json(`Error: ${err}`));
 });
+
+// S12: go to MongoDB -> Collections -> Add My Own Data
