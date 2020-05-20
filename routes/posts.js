@@ -9,7 +9,7 @@ const Posts = require("../models/posts");
 router.get("/", (req, res) => {
   // we're going to find the post from the schema then create the promise to return our posts in JSON format
   Posts.find()
-    .then((article) => res.json(article))
+    .then((post) => res.json(post))
     .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
 // S12: go to MongoDB -> Collections -> Add My Own Data
@@ -31,8 +31,8 @@ router.post("/add", (req, res) => {
 router.get("/:id", (req, res) => {
   // we're finding by ID through request, parameters and ID
   Posts.findById(req.params.id)
-    // creating the promise to return a response and return the article in JSON format
-    .then((article) => res.json(article))
+    // creating the promise to return a response and return the post in JSON format
+    .then((post) => res.json(post))
     // standard error catch
     .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
@@ -40,7 +40,14 @@ router.get("/:id", (req, res) => {
 //Request to UPDATE post by ID
 router.put("/update/:id", (req, res) => {
   // it's going to be the same process as finding by ID above at first
-  Posts.findById(req.params.id);
+  Posts.findById(req.params.id).then((post) => {
+    // here is where all of the updates happen
+    (post.title = req.body.title),
+      (post.post = req.body.post),
+      (post.authorname = req.body.authorname);
+
+    post.save().then(() => res.json("The post has been updated successfully."));
+  });
 });
 
 //Request to FIND post by ID and DELETE
