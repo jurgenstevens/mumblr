@@ -61,6 +61,7 @@ router.delete("/:id", (req, res) => {
     .then(() => res.json("The post has been deleted successfully"))
     .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
+// Now that all of the routes have all been tested on Postman, the post routes are now fully CRUDable
 
 // S14 don't forget to export the router
 module.exports = router;
