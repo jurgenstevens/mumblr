@@ -46,7 +46,7 @@ router.put("/update/:id", (req, res) => {
       (post.title = req.body.title),
         (post.post = req.body.post),
         (post.authorname = req.body.authorname);
-
+      // this is to save the new post
       post
         .save()
         .then(() => res.json("The post has been updated successfully."));
@@ -55,6 +55,7 @@ router.put("/update/:id", (req, res) => {
 });
 
 //Request to FIND post by ID and DELETE
+router.delete("/:id", (req, res) => {});
 
 // S13 don't forget to export the router
 module.exports = router;
