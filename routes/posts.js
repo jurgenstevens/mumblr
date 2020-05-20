@@ -7,10 +7,12 @@ const Posts = require("../models/posts");
 // this will be our first route to GET all of the posts to DISPLAY
 router.get("/", (req, res) => {
   // we're going to find the post from the schema then create the promise to return our posts in JSON format
-  Post.find()
+  Posts.find()
     .then((article) => res.json(article))
-    // then we'll catch the error with status 400
-    .catch((err) => res.status(400).json(`Error: ${err}`));
+    .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
 
 // S12: go to MongoDB -> Collections -> Add My Own Data
+
+// S13 don't forget to export the router
+module.exports = router;

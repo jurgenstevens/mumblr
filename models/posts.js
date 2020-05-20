@@ -12,4 +12,4 @@ const postSchema = new Schema({
 const Posts = mongoose.model("Posts", postSchema);
 
 // S9: here we're exporting and continue onto the routes
-module.export = Posts;
+module.exports = Posts;
