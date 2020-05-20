@@ -5,16 +5,16 @@ const router = express.Router();
 const Posts = require("../models/posts");
 
 // this will be our first route
-// GET request to get ALL of the posts to DISPLAY
+// S12: GET request to get ALL of the posts to DISPLAY
 router.get("/", (req, res) => {
   // we're going to find the post from the schema then create the promise to return our posts in JSON format
   Posts.find()
     .then((post) => res.json(post))
     .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
-// S12: go to MongoDB -> Collections -> Add My Own Data
+// S13: go to MongoDB -> Collections -> Add My Own Data
 
-// POST request to ADD a new post
+// S15: POST request to ADD a new post
 router.post("/add", (req, res) => {
   const newPost = new Posts({
     title: req.body.title,
@@ -27,7 +27,7 @@ router.post("/add", (req, res) => {
     .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
 
-//Request to GET/FIND post by ID
+// S16: Request to GET/FIND post by ID
 router.get("/:id", (req, res) => {
   // we're finding by ID through request, parameters and ID
   Posts.findById(req.params.id)
@@ -37,7 +37,7 @@ router.get("/:id", (req, res) => {
     .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
 
-//Request to UPDATE post by ID
+// S17: Request to UPDATE post by ID
 router.put("/update/:id", (req, res) => {
   // it's going to be the same process as finding by ID above at first
   Posts.findById(req.params.id)
@@ -54,8 +54,13 @@ router.put("/update/:id", (req, res) => {
     .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
 
-//Request to FIND post by ID and DELETE
-router.delete("/:id", (req, res) => {});
+//S18: Request to FIND post by ID and DELETE
+router.delete("/:id", (req, res) => {
+  // need I state the obvious on what's going on here?
+  Posts.findByIdAndDelete(req.params.id)
+    .then(() => res.json("The post has been deleted successfully"))
+    .catch((err) => res.status(400).res.json(`Error: ${err}`));
+});
 
-// S13 don't forget to export the router
+// S14 don't forget to export the router
 module.exports = router;
