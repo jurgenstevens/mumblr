@@ -38,6 +38,10 @@ router.get("/:id", (req, res) => {
 });
 
 //Request to UPDATE post by ID
+router.put("/update/:id", (req, res) => {
+  // it's going to be the same process as finding by ID above at first
+  Posts.findById(req.params.id);
+});
 
 //Request to FIND post by ID and DELETE
 
