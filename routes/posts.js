@@ -40,14 +40,18 @@ router.get("/:id", (req, res) => {
 //Request to UPDATE post by ID
 router.put("/update/:id", (req, res) => {
   // it's going to be the same process as finding by ID above at first
-  Posts.findById(req.params.id).then((post) => {
-    // here is where all of the updates happen
-    (post.title = req.body.title),
-      (post.post = req.body.post),
-      (post.authorname = req.body.authorname);
+  Posts.findById(req.params.id)
+    .then((post) => {
+      // here is where all of the updates happen
+      (post.title = req.body.title),
+        (post.post = req.body.post),
+        (post.authorname = req.body.authorname);
 
-    post.save().then(() => res.json("The post has been updated successfully."));
-  });
+      post
+        .save()
+        .then(() => res.json("The post has been updated successfully."));
+    })
+    .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
 
 //Request to FIND post by ID and DELETE
