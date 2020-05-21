@@ -13,7 +13,7 @@ const port = process.env.PORT || 8000;
 app.use(cors());
 app.use(express.json());
 
-// this will be the connnection to MongoDB through .env
+// this will be the connection to MongoDB through .env
 const uri = process.env.ATLAS_URI;
 // S5: run "npm i dotenv" in terminal to connect to .env file
 
@@ -34,4 +34,4 @@ app.use("/posts", postsRouter);
 
 app.listen(port, () => console.log(`The app is running on Port : ${port}`));
 // Mongoose server connection runs without any issues
-// Next create the schema
+// Next create the schema in models/posts.js
