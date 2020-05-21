@@ -62,6 +62,7 @@ router.delete("/:id", (req, res) => {
     .catch((err) => res.status(400).res.json(`Error: ${err}`));
 });
 // Now that all of the routes have all been tested on Postman, the post routes are now fully CRUDable
+// S19: Time to npx create-react-app
 
 // S14 don't forget to export the router
 module.exports = router;
