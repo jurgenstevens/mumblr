@@ -9,9 +9,11 @@ function App() {
     <div className="App">
       <h1>Mumblr</h1>
       <br />
-      <button className="btn btn-primary">Click Here</button>
     </div>
   );
 }
 
 export default App;
+
+// S21: Under src folder create a components folder
+// S22: Create layouts folder within components folder
