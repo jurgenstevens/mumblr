@@ -8,8 +8,7 @@ import Header from "./components/layouts/Header";
 function App() {
   return (
     <div className="App">
-      <h1>Mumblr</h1>
-      <br />
+      <Header />
     </div>
   );
 }
