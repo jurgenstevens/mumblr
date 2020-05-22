@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 
 const Header = () => {
   return (
@@ -9,3 +10,5 @@ const Header = () => {
 };
 
 export default Header;
+
+// S24: Type 'npm i styled-components' in terminal to install in this component
