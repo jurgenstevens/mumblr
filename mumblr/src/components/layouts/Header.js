@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Header = () => {
   return (
     <MainContainer>
-      <h1>Mumblr</h1>
+      <h1>mumblr</h1>
     </MainContainer>
   );
 };
