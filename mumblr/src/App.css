@@ -4,3 +4,7 @@
   --goldenrod: #daa520;
   --dark-olive: #6b8232;
 }
+
+* {
+  font-family: "Jura", sans-serif;
+}
