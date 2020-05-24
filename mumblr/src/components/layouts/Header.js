@@ -11,10 +11,9 @@ const Header = () => {
 
 export default Header;
 
+// S24: Type 'npm i styled-components' in terminal to install in this component
 // This is the main container using styled-components
 const MainContainer = styled.header`
   background: url(../../images/mumblrheader.png) no-repeat center/cover;
   height: 25rem;
 `;
-
-// S24: Type 'npm i styled-components' in terminal to install in this component
