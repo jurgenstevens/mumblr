@@ -8,7 +8,7 @@ import styled from "styled-components";
 const Navbar = () => {
   return (
     <NavbarContainer>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark">
         <a className="navbar-brand" href="#">
           mumblr
         </a>
@@ -47,5 +47,5 @@ export default Navbar;
 
 // Main Navbar container
 const NavbarContainer = styled.div`
-  background: var(--dark-olive);
+  background: var(--navbar-blue);
 `;
