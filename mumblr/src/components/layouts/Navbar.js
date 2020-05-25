@@ -1,5 +1,8 @@
 import React from "react";
 
+// S25: Copy and paste code below from Navbar Bootstrap site. Make adjustments if necessary.
+// S26: Navbar file is exporting here but make sure to import it in App.js
+
 const Navbar = () => {
   return (
     <div>
