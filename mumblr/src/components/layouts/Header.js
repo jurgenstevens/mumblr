@@ -1,10 +1,20 @@
 import React from "react";
 import styled from "styled-components";
+import logo from "../../newmumblrlogo.png";
 
 const Header = () => {
   return (
     <MainContainer>
-      <h1>mumblr!</h1>
+      <img
+        style={{
+          width: "250px",
+          position: "absolute",
+          top: "20%",
+          left: "35%",
+        }}
+        src={logo}
+        alt="logo"
+      />
     </MainContainer>
   );
 };
@@ -17,13 +27,13 @@ const MainContainer = styled.header`
   background: url(../../images/bluewaveheader.png) no-repeat center/cover;
   height: 15rem;
 
-  h1 {
-    transform: translate(-50%, -50%);
-    color: #000;
-    font-weight: 900;
-    position: absolute;
-    top: 15%;
-    left: 52%;
-    font-size: 80px;
-  }
+  // h1 {
+  //   transform: translate(-50%, -50%);
+  //   color: #000;
+  //   font-weight: 900;
+  //   position: absolute;
+  //   top: 15%;
+  //   left: 52%;
+  //   font-size: 80px;
+  // }
 `;
