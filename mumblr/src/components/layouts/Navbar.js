@@ -50,5 +50,8 @@ const NavbarContainer = styled.div`
   background: var(--navbar-blue);
   .nav-link {
     color: #fff !important;
+    &:hover {
+      background: var(--light-blue);
+    }
   }
 `;
