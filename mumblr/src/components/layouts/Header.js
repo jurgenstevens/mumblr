@@ -15,7 +15,7 @@ export default Header;
 // This is the main container using styled-components
 const MainContainer = styled.header`
   background: url(../../images/mumblrheader.png) no-repeat center/cover;
-  height: 25rem;
+  height: 15rem;
 
   h1 {
     transform: translate(-50%, -50%);
@@ -23,6 +23,6 @@ const MainContainer = styled.header`
     font-weight: 900;
     position: absolute;
     top: 10%;
-    left: 50%;
+    left: 20%;
   }
 `;
