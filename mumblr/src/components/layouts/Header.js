@@ -14,16 +14,16 @@ export default Header;
 // S24: Type 'npm i styled-components' in terminal to install in this component
 // This is the main container using styled-components
 const MainContainer = styled.header`
-  background: url(../../images/mumblrthoughtheader.png) no-repeat center/cover;
-  height: 20rem;
+  background: url(../../images/bluewaveheader.png) no-repeat center/cover;
+  height: 15rem;
 
   h1 {
     transform: translate(-50%, -50%);
     color: #000;
     font-weight: 900;
     position: absolute;
-    top: 22%;
+    top: 15%;
     left: 52%;
-    font-size: 60px;
+    font-size: 80px;
   }
 `;

@@ -1,11 +1,13 @@
 import React from "react";
+import styled from "styled-components";
 
 // S25: Copy and paste code below from Navbar Bootstrap site. Make adjustments if necessary.
 // S26: Navbar file is exporting here but make sure to import it in App.js
+// S28: Import styled components and
 
 const Navbar = () => {
   return (
-    <div>
+    <NavbarContainer>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <a className="navbar-brand" href="#">
           mumblr
@@ -37,8 +39,13 @@ const Navbar = () => {
           </ul>
         </div>
       </nav>
-    </div>
+    </NavbarContainer>
   );
 };
 
 export default Navbar;
+
+// Main Navbar container
+const NavbarContainer = styled.div`
+  background: var(--dark-olive);
+`;
