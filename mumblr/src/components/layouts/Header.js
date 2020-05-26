@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../../newmumblrlogo.png";
+import logo from "../../bluemumblrlogo02.png";
 
 const Header = () => {
   return (
