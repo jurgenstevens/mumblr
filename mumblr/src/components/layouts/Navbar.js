@@ -10,7 +10,7 @@ const Navbar = () => {
     <NavbarContainer>
       <nav className="navbar navbar-expand-lg navbar-dark">
         <a className="navbar-brand" href="#">
-          mumblr
+          Welcome!
         </a>
         <button
           className="navbar-toggler"
