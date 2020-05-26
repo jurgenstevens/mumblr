@@ -4,6 +4,7 @@ import styled from "styled-components";
 // S25: Copy and paste code below from Navbar Bootstrap site. Make adjustments if necessary.
 // S26: Navbar file is exporting here but make sure to import it in App.js
 // S28: Import styled components and add Navbar color and navbar links hover color
+// S29: Then that will be exported to App.js
 
 const Navbar = () => {
   return (
