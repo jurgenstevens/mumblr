@@ -6,7 +6,7 @@ import styled from "styled-components";
 const Footer = () => {
   return (
     <FooterContainer>
-      <span>&copy;{new Date().getFullYear()}All Rights Reserved. Mumblr.</span>
+      <span>&copy;{new Date().getFullYear()} All Rights Reserved. Mumblr.</span>
     </FooterContainer>
   );
 };
@@ -23,6 +23,9 @@ const FooterContainer = styled.footer`
   width: 100%;
 
   span {
-    color: white;
+    color: #fff;
+    top: 1.5rem;
+    left: 1rem;
+    position: relative;
   }
 `;

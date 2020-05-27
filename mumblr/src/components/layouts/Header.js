@@ -10,7 +10,7 @@ const Header = () => {
           width: "250px",
           position: "absolute",
           top: "20%",
-          left: "35%",
+          left: "43%",
         }}
         src={logo}
         alt="logo"
