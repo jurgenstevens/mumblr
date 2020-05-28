@@ -66,3 +66,5 @@ router.delete("/:id", (req, res) => {
 
 // S14 don't forget to export the router
 module.exports = router;
+
+// Craeted three new posts with lorem ipsum
