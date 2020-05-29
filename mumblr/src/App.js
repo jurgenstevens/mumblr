@@ -28,3 +28,4 @@ export default App;
 // S27: Make sure Navbar is imported then write/insert it below the header.
 // S30: Once Navbar is in place, create the Footer.js component in layouts.
 // S34: Create Posts.js under Components directory and import it in App.js
+// S36: To route to the Posts component we will import Router from react-router-dom in index.js
