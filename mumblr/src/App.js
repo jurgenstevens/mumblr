@@ -27,3 +27,4 @@ export default App;
 // S24: Create the Navbar component within layouts folder and type snippet 'rafce' and then import it to App.js
 // S27: Make sure Navbar is imported then write/insert it below the header.
 // S30: Once Navbar is in place, create the Footer.js component in layouts.
+// S34: Create Posts.js under Components directory and import it in App.js
