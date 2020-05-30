@@ -1,4 +1,5 @@
 import React from "react";
+import { Route } from "react-router-dom";
 import "./App.css";
 //S20: Clear all of the files you don't need then install
 // Bootstrap by typing "npm i bootstrap" in the terminal

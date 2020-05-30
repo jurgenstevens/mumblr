@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// S36: Imported below and then wrap the App components within the Router tags
+// S36: Imported below and then wrap the App components within the Router tags then import Router in App.js
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
