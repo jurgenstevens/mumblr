@@ -13,6 +13,7 @@ const Posts = ({ posts }) => {
         <div>
           <h2>{post.title}</h2>
           <p>{post.post}</p>
+          <span>{post.authorname}</span>
         </div>
       ))}
     </div>
