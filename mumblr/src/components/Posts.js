@@ -6,10 +6,14 @@ const Posts = ({ posts }) => {
   return (
     // S47: In curly braces within the div, add posts and use the map method with the arrow function with post and key within the parameter of the arrow function
     // S48: Within the arrow function use your HTML tags and within curly braces, the javascript {post.title}
+    // S49: Now that the post titles rendered, to render the post's post/article, you must wrap the title, post/article, and author within a div or else you'll get and error
     <div>
       Hello from the Posts component!
       {posts.map((post, key) => (
-        <h2>{post.title}</h2>
+        <div>
+          <h2>{post.title}</h2>
+          <p>{post.post}</p>
+        </div>
       ))}
     </div>
   );
