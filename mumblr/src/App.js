@@ -11,6 +11,14 @@ import Footer from "./components/layouts/Footer";
 import Posts from "./components/Posts";
 
 function App() {
+  // S40: Create your hooks before the return
+  // S41: Below is setting your state with hooks
+  const [posts, setPosts] = useState([]);
+  // S42: useEffect is using hooks instead of "willMount/didMount" to render the data from the database
+  useEffect(() => {
+    axios.get("http://localhost8000");
+  });
+
   return (
     <div className="App">
       <Header />
@@ -33,4 +41,4 @@ export default App;
 // S36: To route to the Posts component we will import Router from react-router-dom in index.js
 // S37: Then import Route from react-router-dom after import React
 // S38: Created a Route tag under the Navbar that will make the Posts component as the main page i.e. "/"
-// S39: Import Axios above and import {UseState, useEffects} from "react" at the top for react hooks
+// S39: Import Axios above and import {UseState, useEffects} hooks from "react"
