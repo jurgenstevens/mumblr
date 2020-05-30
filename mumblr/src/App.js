@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
+import axios from "axios";
 import "./App.css";
 //S20: Clear all of the files you don't need then install
 // Bootstrap by typing "npm i bootstrap" in the terminal
@@ -32,3 +33,4 @@ export default App;
 // S36: To route to the Posts component we will import Router from react-router-dom in index.js
 // S37: Then import Route from react-router-dom after import React
 // S38: Created a Route tag under the Navbar that will make the Posts component as the main page i.e. "/"
+// S39: Import Axios above and import {UseState, useEffects} from "react" at the top for react hooks
