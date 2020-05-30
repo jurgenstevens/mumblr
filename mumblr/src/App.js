@@ -15,6 +15,7 @@ function App() {
   // S41: Below is setting your state with hooks with useState as an empty array
   const [posts, setPosts] = useState([]);
   // S42: useEffect is using hooks instead of "willMount/didMount" to render the data from the database
+  // S43: With axios you get a request from the server/backend with the specified URL using a promise operation
   useEffect(() => {
     axios
       .get("http://localhost8000/posts")
