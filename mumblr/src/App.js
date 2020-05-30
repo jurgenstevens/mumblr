@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Header />
       <Navbar />
-      <Router />
+      <Route to="/" component={Posts} />
       <Footer />
     </div>
   );
@@ -31,3 +31,4 @@ export default App;
 // S34: Create Posts.js under Components directory and import it in App.js
 // S36: To route to the Posts component we will import Router from react-router-dom in index.js
 // S37: Then import Route from react-router-dom after import React
+// S38: Created a Route tag under the Navbar that will make the Posts component as the main page i.e. "/"
