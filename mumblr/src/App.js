@@ -24,10 +24,13 @@ function App() {
   });
 
   return (
+    // S44: To render your posts, change the route from components to render the Posts component with an arrow function
+    // S45: In order to pass the props to the state, the posts(state) will pass the state within the Posts component/posts(component).
+    // S46: Switch to Posts.js
     <div className="App">
       <Header />
       <Navbar />
-      <Route to="/" component={Posts} />
+      <Route to="/" render={() => <Posts posts={posts} />} />
       <Footer />
     </div>
   );
