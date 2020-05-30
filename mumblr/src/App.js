@@ -12,11 +12,14 @@ import Posts from "./components/Posts";
 
 function App() {
   // S40: Create your hooks before the return
-  // S41: Below is setting your state with hooks
+  // S41: Below is setting your state with hooks with useState as an empty array
   const [posts, setPosts] = useState([]);
   // S42: useEffect is using hooks instead of "willMount/didMount" to render the data from the database
   useEffect(() => {
-    axios.get("http://localhost8000");
+    axios
+      .get("http://localhost8000/posts")
+      .then((res) => setPosts(res.data))
+      .catch((error) => console.log(error));
   });
 
   return (
