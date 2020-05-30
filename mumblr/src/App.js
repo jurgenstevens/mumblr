@@ -18,7 +18,7 @@ function App() {
   // S43: With axios you get a request from the server/backend with the specified URL using a promise operation
   useEffect(() => {
     axios
-      .get("http://localhost8000/posts")
+      .get("http://localhost:8000/posts")
       .then((res) => setPosts(res.data))
       .catch((error) => console.log(error));
   });
