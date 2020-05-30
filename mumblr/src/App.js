@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <Header />
       <Navbar />
-      <Posts />
+      <Router />
       <Footer />
     </div>
   );
@@ -30,3 +30,4 @@ export default App;
 // S30: Once Navbar is in place, create the Footer.js component in layouts.
 // S34: Create Posts.js under Components directory and import it in App.js
 // S36: To route to the Posts component we will import Router from react-router-dom in index.js
+// S37: Then import Route from react-router-dom after import React
