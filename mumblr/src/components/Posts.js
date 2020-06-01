@@ -16,7 +16,7 @@ const Posts = ({ posts }) => {
         <div className="container">
           <h2>{post.title}</h2>
           <p>{post.post}</p>
-          <span>{post.authorname}</span>
+          <span className="badge badge-primary">{post.authorname}</span>
         </div>
       ))}
     </MainContainer>
@@ -26,6 +26,8 @@ const Posts = ({ posts }) => {
 export default Posts;
 
 // S52: Maincontainer styled below and wrap the post component within the Maincontainer tag
+// S53: Add a bootstrap class of container to the div to narrow the margins of the posts.
+// S54: Add bootstrap class of badge-bad
 const MainContainer = styled.div`
   margin: 7rem 0;
 `;
