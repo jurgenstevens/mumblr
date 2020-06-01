@@ -12,9 +12,8 @@ const Posts = ({ posts }) => {
     // S49: Now that the post titles rendered, to render the post's post/article, you must wrap the title, post/article, and author within a div or else you'll get and error
     // S50: Now include post.authorname under the post/article to render OP's name
     <MainContainer>
-      Hello from the Posts component!
       {posts.map((post, key) => (
-        <div>
+        <div className="container">
           <h2>{post.title}</h2>
           <p>{post.post}</p>
           <span>{post.authorname}</span>
@@ -27,4 +26,6 @@ const Posts = ({ posts }) => {
 export default Posts;
 
 // S52: Maincontainer styled below and wrap the post component within the Maincontainer tag
-const MainContainer = styled.div``;
+const MainContainer = styled.div`
+  margin: 7rem 0;
+`;
