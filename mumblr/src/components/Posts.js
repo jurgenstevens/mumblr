@@ -21,12 +21,12 @@ const Posts = ({ posts }) => {
           <h2>{post.title}</h2>
           <p>{post.post}</p>
           <span className="badge badge-primary">{post.authorname}</span>
-          <div className="row">
+          <div className="row my-3">
             <div className="col-sm-2">
-              <a className="btn btn-primary">Edit</a>
+              <a className="btn btn-outline-primary">Edit</a>
             </div>
             <div className="col-sm-2">
-              <a className="btn btn-danger">Delete</a>
+              <a className="btn btn-outline-danger">Delete</a>
             </div>
           </div>
         </div>
