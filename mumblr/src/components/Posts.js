@@ -13,10 +13,22 @@ const Posts = ({ posts }) => {
     // S50: Now include post.authorname under the post/article to render OP's name
     <MainContainer>
       {posts.map((post, key) => (
+        // S53: Add a bootstrap class of container to the div to narrow the margins of the posts.
+        // S54: Add bootstrap class of badge badge-primary to change author name to a blue badge
+        // S55: Create a div within the container under the posts with a class of row for two buttons to edit or delete a post.
+        // S56: Use the anchor tag within the small column for an edit and delete button
         <div className="container">
           <h2>{post.title}</h2>
           <p>{post.post}</p>
           <span className="badge badge-primary">{post.authorname}</span>
+          <div className="row">
+            <div className="col-sm-2">
+              <a className="btn btn-primary">Edit</a>
+            </div>
+            <div className="col-sm-2">
+              <a className="btn btn-danger">Delete</a>
+            </div>
+          </div>
         </div>
       ))}
     </MainContainer>
@@ -26,8 +38,6 @@ const Posts = ({ posts }) => {
 export default Posts;
 
 // S52: Maincontainer styled below and wrap the post component within the Maincontainer tag
-// S53: Add a bootstrap class of container to the div to narrow the margins of the posts.
-// S54: Add bootstrap class of badge-bad
 const MainContainer = styled.div`
   margin: 7rem 0;
 `;
