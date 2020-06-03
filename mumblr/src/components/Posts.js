@@ -26,7 +26,7 @@ const Posts = ({ posts }) => {
               <a className="btn btn-outline-primary">Edit Post</a>
             </div>
             <div className="col-sm-2">
-              <a className="btn btn-outline-danger">Delete</a>
+              <a className="btn btn-outline-danger">Delete Post</a>
             </div>
           </div>
         </div>
