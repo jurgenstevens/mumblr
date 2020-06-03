@@ -23,7 +23,7 @@ const Posts = ({ posts }) => {
           <span className="badge badge-primary">{post.authorname}</span>
           <div className="row my-3">
             <div className="col-sm-2">
-              <a className="btn btn-outline-primary">Edit</a>
+              <a className="btn btn-outline-primary">Edit Post</a>
             </div>
             <div className="col-sm-2">
               <a className="btn btn-outline-danger">Delete</a>
