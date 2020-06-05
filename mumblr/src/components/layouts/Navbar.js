@@ -5,7 +5,7 @@ import styled from "styled-components";
 // S26: Navbar file is exporting here but make sure to import it in App.js
 // S28: Import styled components and add Navbar color and navbar links hover color
 // S29: Then that will be exported to App.js
-
+// S57:
 const Navbar = () => {
   return (
     <NavbarContainer>
@@ -36,6 +36,9 @@ const Navbar = () => {
               <a className="nav-link" href="#">
                 Link
               </a>
+            </li>
+            <li>
+              <a>Create Post</a>
             </li>
           </ul>
         </div>

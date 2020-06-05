@@ -17,6 +17,7 @@ const Posts = ({ posts }) => {
         // S54: Add bootstrap class of badge badge-primary to change author name to a blue badge
         // S55: Create a div within the container under the posts with a class of row for two buttons to edit or delete a post.
         // S56: Use the anchor tag within the small column for an edit and delete button
+        // S57: Now switch over to the Navbar component in layouts
         <div className="container">
           <h2>{post.title}</h2>
           <p>{post.post}</p>
