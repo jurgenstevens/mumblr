@@ -37,8 +37,10 @@ const Navbar = () => {
                 Link
               </a>
             </li>
-            <li>
-              <a>Create Post</a>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                Create Post
+              </a>
             </li>
           </ul>
         </div>
