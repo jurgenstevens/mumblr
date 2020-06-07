@@ -4,7 +4,9 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon",
+    "client": "npm start --prefix mumblr",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
     "start": "node server.js"
   },
   "repository": {
@@ -25,5 +27,9 @@
     "latest-version": "^5.1.0",
     "mongoose": "^5.9.14",
     "styled-components": "^5.1.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
   }
 }

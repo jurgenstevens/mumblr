@@ -6,6 +6,7 @@ import styled from "styled-components";
 // S28: Import styled components and add Navbar color and navbar links hover color
 // S29: Then that will be exported to App.js
 // S57: Add a "Create Post" button for the Navbar and add the same bootstrap classNames as the listed items in the ul for the navbar
+// S58: Switch back over to the Posts.js component.
 const Navbar = () => {
   return (
     <NavbarContainer>

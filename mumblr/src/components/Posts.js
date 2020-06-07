@@ -18,6 +18,9 @@ const Posts = ({ posts }) => {
         // S55: Create a div within the container under the posts with a class of row for two buttons to edit or delete a post.
         // S56: Use the anchor tag within the small column for an edit and delete button
         // S57: Now switch over to the Navbar component in layouts
+        // S58: So now, you want to run nodemon and npm start simultaniously, therefore in the terminal
+        // type: "npm run dev" to start "nodemon" and "npm start" simultaneously.
+        // S59: Jump over to App.js
         <div className="container">
           <h2>{post.title}</h2>
           <p>{post.post}</p>
