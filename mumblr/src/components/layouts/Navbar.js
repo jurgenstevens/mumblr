@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <nav className="navbar navbar-expand-lg navbar-dark">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           Welcome!
         </a>
         <button

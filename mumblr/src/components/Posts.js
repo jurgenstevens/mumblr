@@ -51,4 +51,10 @@ export default Posts;
 // S52: Maincontainer styled below and wrap the post component within the Maincontainer tag
 const MainContainer = styled.div`
   margin: 7rem 0;
+
+  img {
+    width: 10rem;
+    display: block;
+    margin: 0 auto;
+  }
 `;
