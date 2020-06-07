@@ -1,6 +1,8 @@
 import React from "react";
 // S51: Import styled from styled-components and style the posts component below
 import styled from "styled-components";
+// S62: Import the image of the spinner and then place it at the very top of the container
+import spinner from "../spinner.gif";
 
 // S35: Within app directory (In this case mumblr) npm install "axios" and "react-router-dom" in terminal
 
@@ -11,6 +13,7 @@ const Posts = ({ posts }) => {
     // S48: Within the arrow function use your HTML tags and within curly braces, the javascript {post.title}
     // S49: Now that the post titles rendered, to render the post's post/article, you must wrap the title, post/article, and author within a div or else you'll get and error
     // S50: Now include post.authorname under the post/article to render OP's name
+    // S63: Below, use a conditional for the spinner. If the posts are not present then display the spinner.
     <MainContainer>
       {posts.map((post, key) => (
         // S53: Add a bootstrap class of container to the div to narrow the margins of the posts.

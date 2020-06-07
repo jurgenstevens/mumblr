@@ -18,6 +18,7 @@ function App() {
   // S43: With axios you get a request from the server/backend with the specified URL using a promise operation
   // S60: Change the axios.get from localhost:8000 to "/posts".
   // S61: Type in mumblr/package.json "proxy" : "http://localhost:8000" between "private" and "dependencies"
+  // S62: Now to add a data buffering/loading spinner on the screen when loading, go to Posts.js
   useEffect(() => {
     axios
       .get("/posts")
