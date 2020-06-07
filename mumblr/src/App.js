@@ -20,7 +20,7 @@ function App() {
   // S61: Type in mumblr/package.json "proxy" : "http://localhost:8000" between "private" and "dependencies"
   useEffect(() => {
     axios
-      .get("http://localhost:8000/posts")
+      .get("/posts")
       .then((res) => setPosts(res.data))
       .catch((error) => console.log(error));
   });
