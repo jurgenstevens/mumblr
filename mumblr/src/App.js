@@ -16,6 +16,8 @@ function App() {
   const [posts, setPosts] = useState([]);
   // S42: useEffect is using hooks instead of "willMount/didMount" to render the data from the database
   // S43: With axios you get a request from the server/backend with the specified URL using a promise operation
+  // S60: Change the axios.get from localhost:8000 to "/posts".
+  // S61: Type in mumblr/package.json "proxy" : "http://localhost:8000" between "private" and "dependencies"
   useEffect(() => {
     axios
       .get("http://localhost:8000/posts")
