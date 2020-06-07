@@ -13,31 +13,35 @@ const Posts = ({ posts }) => {
     // S48: Within the arrow function use your HTML tags and within curly braces, the javascript {post.title}
     // S49: Now that the post titles rendered, to render the post's post/article, you must wrap the title, post/article, and author within a div or else you'll get and error
     // S50: Now include post.authorname under the post/article to render OP's name
-    // S63: Below, use a conditional for the spinner. If the posts are not present then display the spinner.
+    // S63: Below, use a conditional for the spinner. If the posts are not present then display the spinner, else show the posts.
     <MainContainer>
-      {posts.map((post, key) => (
-        // S53: Add a bootstrap class of container to the div to narrow the margins of the posts.
-        // S54: Add bootstrap class of badge badge-primary to change author name to a blue badge
-        // S55: Create a div within the container under the posts with a class of row for two buttons to edit or delete a post.
-        // S56: Use the anchor tag within the small column for an edit and delete button
-        // S57: Now switch over to the Navbar component in layouts
-        // S58: So now, you want to run nodemon and npm start simultaniously, therefore in the terminal
-        // type: "npm run dev" to start "nodemon" and "npm start" simultaneously.
-        // S59: Jump over to App.js
-        <div className="container">
-          <h2>{post.title}</h2>
-          <p>{post.post}</p>
-          <span className="badge badge-primary">{post.authorname}</span>
-          <div className="row my-3">
-            <div className="col-sm-2">
-              <a className="btn btn-outline-primary">Edit</a>
-            </div>
-            <div className="col-sm-2">
-              <a className="btn btn-outline-danger">Delete</a>
+      {!posts.length ? (
+        <img src={spinner} alt="loading.." />
+      ) : (
+        posts.map((post, key) => (
+          // S53: Add a bootstrap class of container to the div to narrow the margins of the posts.
+          // S54: Add bootstrap class of badge badge-primary to change author name to a blue badge
+          // S55: Create a div within the container under the posts with a class of row for two buttons to edit or delete a post.
+          // S56: Use the anchor tag within the small column for an edit and delete button
+          // S57: Now switch over to the Navbar component in layouts
+          // S58: So now, you want to run nodemon and npm start simultaniously, therefore in the terminal
+          // type: "npm run dev" to start "nodemon" and "npm start" simultaneously.
+          // S59: Jump over to App.js
+          <div className="container">
+            <h2>{post.title}</h2>
+            <p>{post.post}</p>
+            <span className="badge badge-primary">{post.authorname}</span>
+            <div className="row my-3">
+              <div className="col-sm-2">
+                <a className="btn btn-outline-primary">Edit</a>
+              </div>
+              <div className="col-sm-2">
+                <a className="btn btn-outline-danger">Delete</a>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))
+      )}
     </MainContainer>
   );
 };
