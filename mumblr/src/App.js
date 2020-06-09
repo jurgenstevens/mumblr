@@ -35,6 +35,7 @@ function App() {
       <Header />
       <Navbar />
       <Route path="/" render={() => <Posts posts={posts} />} />
+      <Route path="/add-post" component={AddPost} />
       <Footer />
     </div>
   );
