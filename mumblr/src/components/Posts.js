@@ -13,7 +13,8 @@ const Posts = ({ posts }) => {
     // S48: Within the arrow function use your HTML tags and within curly braces, the javascript {post.title}
     // S49: Now that the post titles rendered, to render the post's post/article, you must wrap the title, post/article, and author within a div or else you'll get and error
     // S50: Now include post.authorname under the post/article to render OP's name
-    // S63: Below, use a conditional for the spinner. If the posts are not present then display the spinner, else show the posts.
+    // S63: Below, use a conditional for the spinner. If the posts are not present then display the spinner,
+    //      else show the post, then create an AddPost component in components folder for S64
     <MainContainer>
       {!posts.length ? (
         <img src={spinner} alt="loading.." />

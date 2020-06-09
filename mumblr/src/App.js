@@ -9,6 +9,7 @@ import Header from "./components/layouts/Header";
 import Navbar from "./components/layouts/Navbar";
 import Footer from "./components/layouts/Footer";
 import Posts from "./components/Posts";
+import AdPost from "./components/AddPost";
 
 function App() {
   // S40: Create your hooks before the return
