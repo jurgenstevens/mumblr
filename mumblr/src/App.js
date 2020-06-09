@@ -34,7 +34,7 @@ function App() {
     <div className="App">
       <Header />
       <Navbar />
-      <Route to="/" render={() => <Posts posts={posts} />} />
+      <Route path="/" render={() => <Posts posts={posts} />} />
       <Footer />
     </div>
   );
