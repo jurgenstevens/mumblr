@@ -31,7 +31,7 @@ function App() {
     // S44: To render your posts, change the route from components to render the Posts component with an arrow function
     // S45: In order to pass the props to the state, the posts(state) will pass the state within the Posts component/posts(component).
     // S46: Switch to Posts.js
-    // S65: Now importing the AddPost component, create a route with the path add-post with the AddPost component as the component attribute.
+    // S65: Now importing the AddPost component, create a route with the path add-post with the AddPost component as the component attribute. Jump to Navbar for S66.
     <div className="App">
       <Header />
       <Navbar />

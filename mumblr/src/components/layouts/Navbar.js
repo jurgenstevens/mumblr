@@ -7,6 +7,7 @@ import styled from "styled-components";
 // S29: Then that will be exported to App.js
 // S57: Add a "Create Post" button for the Navbar and add the same bootstrap classNames as the listed items in the ul for the navbar
 // S58: Switch back over to the Posts.js component.
+// S66: Change the "to" attribute for Create Post anchor tag to "/add-post" below.
 const Navbar = () => {
   return (
     <NavbarContainer>
@@ -34,12 +35,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" to="#">
-                Link
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" to="#">
+              <a className="nav-link" to="/add-post">
                 Create Post
               </a>
             </li>
