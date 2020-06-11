@@ -1,4 +1,6 @@
 import React from "react";
+// S67: Change anchor tags to Link Containers by importing them
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 // S25: Copy and paste code below from Navbar Bootstrap site. Make adjustments if necessary.
@@ -12,9 +14,9 @@ const Navbar = () => {
   return (
     <NavbarContainer>
       <nav className="navbar navbar-expand-lg navbar-dark">
-        <a className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/">
           mumblr.
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -30,14 +32,14 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item active">
-              <a className="nav-link" to="/">
+              <Link className="nav-link" to="/">
                 Home <span className="sr-only">(current)</span>
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" to="/add-post">
+              <Link className="nav-link" to="/add-post">
                 Create Post
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

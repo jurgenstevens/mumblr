@@ -35,7 +35,7 @@ function App() {
     <div className="App">
       <Header />
       <Navbar />
-      <Route path="/" render={() => <Posts posts={posts} />} />
+      <Route exact path="/" render={() => <Posts posts={posts} />} />
       <Route path="/add-post" component={AddPost} />
       <Footer />
     </div>
