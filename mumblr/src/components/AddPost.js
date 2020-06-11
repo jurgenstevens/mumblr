@@ -1,6 +1,6 @@
 // S64 Use rfce to set up the AddPost component. For S65 switch to App.js
 import React from "react";
-// S67: Copy and paste the forms code from the Bootstrap website.
+// S67: Copy and paste the forms code from the Bootstrap website. Change class to className and add slashes at the ends of inputs.
 const AddPost = () => {
   return (
     <div>
