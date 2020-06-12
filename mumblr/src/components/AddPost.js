@@ -1,41 +1,25 @@
 // S64 Use rfce to set up the AddPost component. For S65 switch to App.js
 import React from "react";
-// S67: Copy and paste the forms code from the Bootstrap website. Change class to className and add slashes at the ends of inputs.
+// S67: Copy and paste the forms code from the Bootstrap website. Change class attribute to className, the for's to htmlFor and add slashes at the ends of inputs.
 const AddPost = () => {
   return (
     <div>
       <form>
         <div className="form-group">
-          <label for="exampleInputEmail1">Email address</label>
+          <label htmlFor="authorname">Author Name</label>
           <input
-            type="email"
+            type="text"
             className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
+            placeholder="Author Name"
           />
-          <small id="emailHelp" className="form-text text-muted">
-            We'll never share your email with anyone else.
-          </small>
         </div>
         <div className="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-            placeholder="Password"
-          />
+          <label htmlFor="title">Title</label>
+          <input type="text" className="form-control" placeholder="Title" />
         </div>
-        <div className="form-check">
-          <input
-            type="checkbox"
-            className="form-check-input"
-            id="exampleCheck1"
-          />
-          <label className="form-check-label" for="exampleCheck1">
-            Check me out
-          </label>
+        <div class="form-group">
+          <label htmlFor="post">Post</label>
+          <textarea class="form-control" rows="2"></textarea>
         </div>
         <button type="submit" className="btn btn-primary">
           Submit
