@@ -6,7 +6,7 @@ const AddPost = () => {
     <div>
       <form>
         <div className="form-group">
-          <label htmlFor="authorname">Author Name</label>
+          <label htmlFor="authorname">Author</label>
           <input
             type="text"
             className="form-control"
