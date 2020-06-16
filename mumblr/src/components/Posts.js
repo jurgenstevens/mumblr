@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 // S62: Import the image of the spinner and then place it at the very top of the container
 import spinner from "../spinner.gif";
+import { Link } from "react-router-dom";
 
 // S35: Within app directory (In this case mumblr) npm install "axios" and "react-router-dom" in terminal
 
@@ -28,16 +29,16 @@ const Posts = ({ posts }) => {
           // S58: So now, you want to run nodemon and npm start simultaniously, therefore in the terminal
           // type: "npm run dev" to start "nodemon" and "npm start" simultaneously.
           // S59: Jump over to App.js
-          <div className="container">
+          <div className="container" key={key}>
             <h2>{post.title}</h2>
             <p>{post.post}</p>
             <span className="badge badge-primary">{post.authorname}</span>
             <div className="row my-3">
               <div className="col-sm-2">
-                <a className="btn btn-outline-primary">Edit</a>
+                <Link className="btn btn-outline-primary">Edit</Link>
               </div>
               <div className="col-sm-2">
-                <a className="btn btn-outline-danger">Delete</a>
+                <Link className="btn btn-outline-danger">Delete</Link>
               </div>
             </div>
           </div>
