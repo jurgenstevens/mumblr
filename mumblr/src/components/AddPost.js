@@ -22,6 +22,10 @@ const AddPost = () => {
       post,
       authorname,
     };
+    // S76: To clear the fields, add the following:
+    setTitle("");
+    setPost("");
+    setAuthorName("");
 
     // S75: The axios will send this data to the database with the post method and the promise
     axios
@@ -30,7 +34,6 @@ const AddPost = () => {
       .catch((err) => {
         console.log(err);
       });
-    // S76: To clear the fields
   };
 
   return (
