@@ -9,6 +9,7 @@ import axios from "axios";
 // S71: Since the state doesn't change when you type something in, you must add the onChange attribute on each input field for each input type
 // S72: In order to send data to the database, first, you must import axios, then in form, use encType attribute. For more info click here https://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean
 // S73: Then add the onSubmit attribute and insert the function title for what will change when submit is clicked i.e. changeOnClick
+// S77: Create a new components in the component folder called Post.js for Update and Delete functionality.
 const AddPost = () => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
