@@ -9,6 +9,7 @@ import Header from "./components/layouts/Header";
 import Navbar from "./components/layouts/Navbar";
 import Footer from "./components/layouts/Footer";
 import Posts from "./components/Posts";
+import Post from "./components/Post";
 import AddPost from "./components/AddPost";
 
 function App() {
@@ -36,6 +37,11 @@ function App() {
       <Header />
       <Navbar />
       <Route exact path="/" render={() => <Posts posts={posts} />} />
+      <Route
+        exact
+        path="/"
+        render={(props) => <Post {...props} posts={posts} />}
+      />
       <Route path="/add-post" component={AddPost} />
       <Footer />
     </div>

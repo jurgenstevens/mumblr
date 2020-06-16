@@ -30,7 +30,9 @@ const Posts = ({ posts }) => {
           // type: "npm run dev" to start "nodemon" and "npm start" simultaneously.
           // S59: Jump over to App.js
           <div className="container" key={key}>
-            <h2>{post.title}</h2>
+            <Link to={{ pathname: `/post/${post._id}` }}>
+              <h2>{post.title}</h2>
+            </Link>
             <p>{post.post}</p>
             <span className="badge badge-primary">{post.authorname}</span>
             <div className="row my-3">
