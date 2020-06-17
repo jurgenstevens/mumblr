@@ -5,7 +5,7 @@ import axios from "axios";
 // S79: Set up the useState hook for each data input type then set up the axios with the useEffect hook to GET a specific post from the database.
 // S80: Be sure you import this component in App.js and make sure it is being rendered
 // S81: Axios will GET the posts by id through the props of the specific post. THEN( you set the title, post and authorname )
-// S82:
+// S82: In App.js set the "to" attribute to the component link for the GET/READ part of the site which will be "/post/:id" to read specific posts.
 const Post = (props) => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
