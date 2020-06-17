@@ -39,7 +39,7 @@ function App() {
       <Route exact path="/" render={() => <Posts posts={posts} />} />
       <Route
         exact
-        path="/"
+        path="/post/:id"
         render={(props) => <Post {...props} posts={posts} />}
       />
       <Route path="/add-post" component={AddPost} />
