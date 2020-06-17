@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
+import spinner from "../spinner.gif";
 // S78: We're going to import useState to Update and useEffect to render what the post has been updated to. Axios will be used to communicate with the database.
 // S79: Set up the useState hook for each data input type then set up the axios with the useEffect hook to GET a specific post from the database.
 // S80: Be sure you import this component in App.js and make sure it is being rendered
 // S81: Axios will GET the posts by id through the props of the specific post. THEN( you set the title, post and authorname )
 // S82: In App.js set the "to" attribute to the component link for the GET/READ part of the site which will be "/post/:id" to read specific posts.
-// S84: Add a conditional before the h2 in main container to render the loading gif, if the data doesn't render/show.
+// S84: Add a conditional before the h2 in main container to render the loading gif, if the data doesn't render/show. So import the gif.
 const Post = (props) => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
@@ -25,9 +26,15 @@ const Post = (props) => {
 
   return (
     <MainContainer>
-      <h2>{title}</h2>
-      <p>{post}</p>
-      <p>{authorname}</p>
+      {!title || !post || !authorname ? (
+        <img src={spinner} alt="loading" />
+      ) : (
+        <div>
+          <h2>{title}</h2>
+          <p>{post}</p>
+          <p>{authorname}</p>
+        </div>
+      )}
     </MainContainer>
   );
 };
@@ -43,5 +50,11 @@ const MainContainer = styled.div`
     text-align: center;
     font-weight: 900;
     color: #2778e8;
+  }
+
+  img {
+    width: 10rem;
+    display: block;
+    margin: 0 auto;
   }
 `;
