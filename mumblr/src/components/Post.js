@@ -8,6 +8,7 @@ import spinner from "../spinner.gif";
 // S81: Axios will GET the posts by id through the props of the specific post. THEN( you set the title, post and authorname )
 // S82: In App.js set the "to" attribute to the component link for the GET/READ part of the site which will be "/post/:id" to read specific posts.
 // S84: Add a conditional before the h2 in main container to render the loading gif, if the data doesn't render/show. So import the gif.
+// S85: Now add a button at the bottom of the component to return to the main page.
 const Post = (props) => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
@@ -33,6 +34,10 @@ const Post = (props) => {
           <h2>{title}</h2>
           <p>{post}</p>
           <p>{authorname}</p>
+          <br />
+          <button type="submit" className="btn btn-primary">
+            Return Home
+          </button>
         </div>
       )}
     </MainContainer>
