@@ -29,7 +29,7 @@ const EditPost = () => {
   return (
     <AddPostContainer>
       <div className="container">
-        <h1>Create A Post</h1>
+        <h1>Edit Your Post</h1>
         <form onSubmit={changeOnClick} encType="multipart/form-data">
           <div className="form-group">
             <label htmlFor="authorname">Author</label>
@@ -38,7 +38,7 @@ const EditPost = () => {
               value={authorname}
               onChange={(e) => setAuthorName(e.target.value)}
               className="form-control"
-              placeholder="Author"
+              placeholder="Change Author Name"
             />
           </div>
           <div className="form-group">
@@ -48,7 +48,7 @@ const EditPost = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               className="form-control"
-              placeholder="Title"
+              placeholder="Enter New Title"
             />
           </div>
           <div className="form-group">
@@ -58,11 +58,11 @@ const EditPost = () => {
               onChange={(e) => setPost(e.target.value)}
               className="form-control"
               rows="2"
-              placeholder="Write post here"
+              placeholder="Enter new post here"
             ></textarea>
           </div>
           <button type="submit" className="btn btn-primary">
-            Submit
+            Change
           </button>
         </form>
       </div>
