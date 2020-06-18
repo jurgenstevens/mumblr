@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
 import spinner from "../spinner.gif";
@@ -35,9 +36,9 @@ const Post = (props) => {
           <p>{post}</p>
           <p>{authorname}</p>
           <br />
-          <button type="submit" className="btn btn-primary">
+          <Link to="/" type="submit" className="btn btn-primary">
             Return Home
-          </button>
+          </Link>
         </div>
       )}
     </MainContainer>
