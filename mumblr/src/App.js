@@ -11,6 +11,7 @@ import Footer from "./components/layouts/Footer";
 import Posts from "./components/Posts";
 import Post from "./components/Post";
 import AddPost from "./components/AddPost";
+import EditPost from "./components/EditPost";
 
 function App() {
   // S40: Create your hooks before the return
@@ -33,6 +34,8 @@ function App() {
     // S45: In order to pass the props to the state, the posts(state) will pass the state within the Posts component/posts(component).
     // S46: Switch to Posts.js
     // S65: Now importing the AddPost component, create a route with the path add-post with the AddPost component as the component attribute. Jump to Navbar for S66.
+    // S87: Copy the Post.js component Route and paste it just under it. Change it from Post to EditPost and change the path to "/update/:id".
+    // S88: Import the component for it to render then jump to Posts.js.
     <div className="App">
       <Header />
       <Navbar />
@@ -41,6 +44,11 @@ function App() {
         exact
         path="/post/:id"
         render={(props) => <Post {...props} posts={posts} />}
+      />
+      <Route
+        exact
+        path="/update/:id"
+        render={(props) => <EditPost {...props} posts={posts} />}
       />
       <Route path="/add-post" component={AddPost} />
       <Footer />

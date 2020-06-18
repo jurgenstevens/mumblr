@@ -10,7 +10,7 @@ import spinner from "../spinner.gif";
 // S82: In App.js set the "to" attribute to the component link for the GET/READ part of the site which will be "/post/:id" to read specific posts.
 // S84: Add a conditional before the h2 in main container to render the loading gif, if the data doesn't render/show. So import the gif.
 // S85: Now add a button at the bottom of the component to return to the main page i.e. the "Back" button.
-// S86: Next, copy the entire AddPost.js component and create the EDIT/UPDATE component EditPost.js.
+// S86: Next, copy the entire AddPost.js component and create the EDIT/UPDATE component EditPost.js. Then go to App.js to import EditPost component.
 const Post = (props) => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
