@@ -6,6 +6,8 @@ import axios from "axios";
 // S92: Change the axios method from post to put()
 // S93: For the axios PUT route, use backticks and the update route and find by id using ${props.match.params.id} like the GET route in useEffect below.
 // S94: Add a hook: setMessage, then set it in the axios promise instead of a console.log of it posting successfully.
+// S95: Include the message as a span w/ the className of message to add the ui in styled.div below.
+// S96: In the span tags, include message in curly braces.
 const EditPost = (props) => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
@@ -25,7 +27,7 @@ const EditPost = (props) => {
 
     axios
       .put(`/posts/update/${props.match.params.id}`, posts)
-      .then((res) => console.log(res.data))
+      .then((res) => setMessage(res.data))
       .catch((err) => {
         console.log(err);
       });
@@ -78,10 +80,10 @@ const EditPost = (props) => {
               placeholder="Edit post here"
             ></textarea>
           </div>
+          <span className="message">{message}</span>
           <button type="submit" className="btn btn-primary">
             Update
           </button>
-          <span></span>
         </form>
       </div>
     </AddPostContainer>
@@ -98,5 +100,11 @@ const AddPostContainer = styled.div`
   h1 {
     font-weight: 800;
     color: #2778e8;
+  }
+
+  .message{
+    font-weight: 900;
+    color: #2778e8;
+    padding 3rem 3rem 3rem 1;
   }
 `;

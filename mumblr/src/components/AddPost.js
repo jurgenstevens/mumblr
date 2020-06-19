@@ -14,6 +14,7 @@ const AddPost = () => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
   const [authorname, setAuthorName] = useState("");
+  const [message, setMessage] = useState("");
 
   const changeOnClick = (e) => {
     e.preventDefault();
