@@ -32,7 +32,7 @@ const AddPost = () => {
     // S75: The axios will send this data to the database with the post method and the promise
     axios
       .post("/posts/add", posts)
-      .then((res) => console.log(res.data))
+      .then((res) => setMessage(res.data))
       .catch((err) => {
         console.log(err);
       });
@@ -73,6 +73,7 @@ const AddPost = () => {
               placeholder="Write post here"
             ></textarea>
           </div>
+          <span className="message">{message}</span>
           <button type="submit" className="btn btn-primary">
             Submit
           </button>
@@ -94,5 +95,10 @@ const AddPostContainer = styled.div`
   h1 {
     font-weight: 800;
     color: #2778e8;
+  }
+  .message{
+    font-weight: 900;
+    color: #2778e8;
+    padding 3rem 3rem 3rem 1;
   }
 `;
