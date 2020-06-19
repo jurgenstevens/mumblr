@@ -14,7 +14,7 @@ import spinner from "../spinner.gif";
 const Post = (props) => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
-  const [authorname, setAuthorname] = useState("");
+  const [authorname, setAuthorName] = useState("");
 
   useEffect(() => {
     axios
@@ -22,7 +22,7 @@ const Post = (props) => {
       .then((res) => [
         setTitle(res.data.title),
         setPost(res.data.post),
-        setAuthorname(res.data.authorname),
+        setAuthorName(res.data.authorname),
       ])
       .catch((err) => console.log(err));
   }, [props]);

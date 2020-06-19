@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 
-const EditPost = () => {
+// S90: import useEffect for the axios get method and pass the props through the EditPost component.
+// S91:
+
+const EditPost = (props) => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
   const [authorname, setAuthorName] = useState("");
@@ -25,6 +28,17 @@ const EditPost = () => {
         console.log(err);
       });
   };
+
+  useEffect(() => {
+    axios
+      .get(`/posts/${props.match.params.id}`)
+      .then((res) => [
+        setTitle(res.data.title),
+        setPost(res.data.post),
+        setAuthorName(res.data.authorname),
+      ])
+      .catch((err) => console.log(err));
+  }, [props]);
 
   return (
     <AddPostContainer>
@@ -72,8 +86,6 @@ const EditPost = () => {
 
 export default EditPost;
 
-// S68: Import styled components after importing react and continue styling the AddPost component below
-// main container styling
 const AddPostContainer = styled.div`
   margin: 3rem auto;
   padding: 4rem;

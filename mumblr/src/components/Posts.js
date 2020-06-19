@@ -29,7 +29,8 @@ const Posts = ({ posts }) => {
           // S58: So now, you want to run nodemon and npm start simultaniously, therefore in the terminal
           // type: "npm run dev" to start "nodemon" and "npm start" simultaneously.
           // S59: Jump over to App.js
-          // S89: Add the to attribute for the Edit link/button to the pathname `/update/${post._id}` to render EditPost.js
+          // S89: Add the to attribute for the Edit link/button to the pathname `/update/${post._id}` to render EditPost.js.
+          // S90: Switch to EditPost.js for S90.
           <div className="container" key={key}>
             <Link to={{ pathname: `/post/${post._id}` }}>
               <h2>{post.title}</h2>
