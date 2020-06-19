@@ -74,6 +74,7 @@ const AddPost = () => {
             ></textarea>
           </div>
           <span className="message">{message}</span>
+          <br />
           <button type="submit" className="btn btn-primary">
             Submit
           </button>

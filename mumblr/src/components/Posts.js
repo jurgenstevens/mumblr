@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 // S51: Import styled from styled-components and style the posts component below
 import styled from "styled-components";
 // S62: Import the image of the spinner and then place it at the very top of the container
 import spinner from "../spinner.gif";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 // S35: Within app directory (In this case mumblr) npm install "axios" and "react-router-dom" in terminal
 
 // S46: Now we will map through our {posts} to display them so add posts within the parenthesis to pass props.
 const Posts = ({ posts }) => {
+  // S97: Create the useState hook for the DELETE functionality.
+  const [post, setPost] = useState([]);
+  // S98: Import axios and create the function to delete posts with the delete method and route.
+  const deletePost = (id) => {
+    axios.delete(`/posts/${id}`).then((res) => alert(res.data));
+    setPost(post.filter((elem) => elem._id !== id));
+  };
   return (
     // S47: In curly braces within the div, add posts and use the map method with the arrow function with post and key within the parameter of the arrow function
     // S48: Within the arrow function use your HTML tags and within curly braces, the javascript {post.title}
@@ -32,7 +40,11 @@ const Posts = ({ posts }) => {
           // S89: Add the to attribute for the Edit link/button to the pathname `/update/${post._id}` to render EditPost.js.
           // S90: Switch to EditPost.js for S90.
           <div className="container" key={key}>
-            <Link to={{ pathname: `/post/${post._id}` }}>
+            <Link
+              to={{
+                pathname: `/post/${post._id}`,
+              }}
+            >
               <h2>{post.title}</h2>
             </Link>
             <p>{post.post}</p>
@@ -40,14 +52,21 @@ const Posts = ({ posts }) => {
             <div className="row my-3">
               <div className="col-sm-2">
                 <Link
-                  to={{ pathname: `/update/${post._id}` }}
+                  to={{
+                    pathname: `/update/${post._id}`,
+                  }}
                   className="btn btn-outline-primary"
                 >
                   Edit
                 </Link>
               </div>
               <div className="col-sm-2">
-                <Link className="btn btn-outline-danger">Delete</Link>
+                <Link
+                  onClick={() => deletePost(post._id)}
+                  className="btn btn-outline-danger"
+                >
+                  Delete
+                </Link>
               </div>
             </div>
           </div>
