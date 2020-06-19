@@ -19,7 +19,7 @@ const EditPost = () => {
     setAuthorName("");
 
     axios
-      .post("/posts/add", posts)
+      .post("/posts/edit-post", posts)
       .then((res) => console.log(res.data))
       .catch((err) => {
         console.log(err);

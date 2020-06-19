@@ -39,7 +39,7 @@ const Posts = ({ posts }) => {
             <div className="row my-3">
               <div className="col-sm-2">
                 <Link
-                  to={{ pathname: `/update/${post._id}` }}
+                  to={{ pathname: `/edit-post/${post._id}` }}
                   className="btn btn-outline-primary"
                 >
                   Edit

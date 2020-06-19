@@ -35,7 +35,7 @@ function App() {
     // S46: Switch to Posts.js
     // S65: Now importing the AddPost component, create a route with the path add-post with the AddPost component as the component attribute. Jump to Navbar for S66.
     // S87: Copy the Post.js component Route and paste it just under it. Change it from Post to EditPost and change the path to "/update/:id".
-    // S88: Import the component for it to render then jump to Posts.js.
+    // S88: Import the component for it to render then jump to Posts.js for S89.
     <div className="App">
       <Header />
       <Navbar />
@@ -47,7 +47,7 @@ function App() {
       />
       <Route
         exact
-        path="/update/:id"
+        path="/edit-post/:id"
         render={(props) => <EditPost {...props} posts={posts} />}
       />
       <Route path="/add-post" component={AddPost} />
