@@ -3,7 +3,8 @@ import styled from "styled-components";
 import axios from "axios";
 
 // S90: import useEffect for the axios get method and pass the props through the EditPost parameter.
-
+// S92: Change the axios method from post to put()
+// S93: For the axios PUT route, use backticks and the update route and find by id using ${props.match.params.id} like the GET route in useEffect below
 const EditPost = (props) => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
@@ -21,14 +22,14 @@ const EditPost = (props) => {
     setAuthorName("");
 
     axios
-      .post("/posts/update", posts)
+      .put(`/posts/update/${props.match.params.id}`, posts)
       .then((res) => console.log(res.data))
       .catch((err) => {
         console.log(err);
       });
   };
 
-  // S91: Below useEffect will autopopulate the fields with the data from the database for the specific post.
+  // S91: Below useEffect will autopopulate the fields with the data from the database for the specific post by id. Be sure to delete props in the array at the end.
   useEffect(() => {
     axios
       .get(`/posts/${props.match.params.id}`)
@@ -38,7 +39,7 @@ const EditPost = (props) => {
         setAuthorName(res.data.authorname),
       ])
       .catch((err) => console.log(err));
-  }, [props]);
+  }, []);
 
   return (
     <AddPostContainer>
