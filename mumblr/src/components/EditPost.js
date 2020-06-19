@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 
-// S90: import useEffect for the axios get method and pass the props through the EditPost component.
-// S91:
+// S90: import useEffect for the axios get method and pass the props through the EditPost parameter.
 
 const EditPost = (props) => {
   const [title, setTitle] = useState("");
@@ -29,6 +28,7 @@ const EditPost = (props) => {
       });
   };
 
+  // S91: Below useEffect will autopopulate the fields with the data from the database for the specific post.
   useEffect(() => {
     axios
       .get(`/posts/${props.match.params.id}`)
