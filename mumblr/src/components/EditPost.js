@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 
@@ -19,7 +19,7 @@ const EditPost = () => {
     setAuthorName("");
 
     axios
-      .post("/posts/edit-post", posts)
+      .post("/posts/update", posts)
       .then((res) => console.log(res.data))
       .catch((err) => {
         console.log(err);
@@ -38,7 +38,7 @@ const EditPost = () => {
               value={authorname}
               onChange={(e) => setAuthorName(e.target.value)}
               className="form-control"
-              placeholder="Change Author Name"
+              placeholder="Edit Author Name"
             />
           </div>
           <div className="form-group">
@@ -48,7 +48,7 @@ const EditPost = () => {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               className="form-control"
-              placeholder="Enter New Title"
+              placeholder="Edit Title"
             />
           </div>
           <div className="form-group">
@@ -58,7 +58,7 @@ const EditPost = () => {
               onChange={(e) => setPost(e.target.value)}
               className="form-control"
               rows="2"
-              placeholder="Enter new post here"
+              placeholder="Edit post here"
             ></textarea>
           </div>
           <button type="submit" className="btn btn-primary">

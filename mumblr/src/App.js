@@ -47,7 +47,7 @@ function App() {
       />
       <Route
         exact
-        path="/edit-post/:id"
+        path="/update/:id"
         render={(props) => <EditPost {...props} posts={posts} />}
       />
       <Route path="/add-post" component={AddPost} />
