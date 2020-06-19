@@ -4,11 +4,13 @@ import axios from "axios";
 
 // S90: import useEffect for the axios get method and pass the props through the EditPost parameter.
 // S92: Change the axios method from post to put()
-// S93: For the axios PUT route, use backticks and the update route and find by id using ${props.match.params.id} like the GET route in useEffect below
+// S93: For the axios PUT route, use backticks and the update route and find by id using ${props.match.params.id} like the GET route in useEffect below.
+// S94: Add a hook: setMessage, then set it in the axios promise instead of a console.log of it posting successfully.
 const EditPost = (props) => {
   const [title, setTitle] = useState("");
   const [post, setPost] = useState("");
   const [authorname, setAuthorName] = useState("");
+  const [message, setMessage] = useState("");
 
   const changeOnClick = (e) => {
     e.preventDefault();
@@ -77,8 +79,9 @@ const EditPost = (props) => {
             ></textarea>
           </div>
           <button type="submit" className="btn btn-primary">
-            Change
+            Update
           </button>
+          <span></span>
         </form>
       </div>
     </AddPostContainer>
