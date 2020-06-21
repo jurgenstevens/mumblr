@@ -34,7 +34,7 @@ const EditPost = (props) => {
       });
   };
 
-  // S91: Below useEffect will autopopulate the fields with the data from the database for the specific post by id. Be sure to delete props in the array at the end.
+  // S91: Below useEffect will autopopulate the fields with the data from the database for the specific post by id. Be sure to delete "props" in the array brackets at the end.
   useEffect(() => {
     axios
       .get(`/posts/${props.match.params.id}`)
