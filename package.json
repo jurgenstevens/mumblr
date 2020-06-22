@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "server": "nodemon",
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm run build",
-    "heroku-postbuild": "npm run install-client && npm run build ",
+    "build": "cd mumblr && npm run build",
+    "install-mumblr": "cd mumblr && npm run build",
+    "heroku-postbuild": "npm run install-mumblr && npm run build ",
     "start": "node server.js",
     "client": "npm start --prefix mumblr",
     "dev": "concurrently \"npm run server\" \"npm run client\""
