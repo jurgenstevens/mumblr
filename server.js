@@ -27,9 +27,9 @@ const connection = mongoose.connection;
 connection.once("open", () =>
   console.log("Mongoose connnection established successfully")
 );
-mongoose.connection.on("error", (err) => {
-  console.log("MongoDB connection error: ", err);
-});
+// mongoose.connection.on("error", (err) => {
+//   console.log("MongoDB connection error: ", err);
+// });
 
 // this is the middleware, and will be imported from the posts.js in routes folder
 const postsRouter = require("./routes/posts");
