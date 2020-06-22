@@ -9,7 +9,7 @@
     "install-mumblr": "cd mumblr && npm run build",
     "heroku-postbuild": "npm run install-mumblr && npm run build ",
     "start": "node server.js",
-    "client": "npm start --prefix mumblr",
+    "mumblr": "npm start --prefix mumblr",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
