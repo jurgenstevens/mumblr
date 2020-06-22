@@ -17,11 +17,15 @@ app.use(express.json());
 const uri = process.env.ATLAS_URI;
 // S5: run "npm i dotenv" in terminal to connect to .env file
 
-mongoose.connect(uri, {
-  useNewUrlParser: true,
-  // S6: added the following option according nodejs instructions to use new Server Discover and Monitoring engine
-  useUnifiedTopology: true,
-});
+mongoose
+  .connect(uri, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    // S6: added the following option according nodejs instructions to use new Server Discover and Monitoring engine
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Database Connected"))
+  .catch((err) => console.log(err));
 
 const connection = mongoose.connection;
 connection.once("open", () =>
