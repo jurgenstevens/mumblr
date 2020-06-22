@@ -47,3 +47,5 @@ if (process.env.NODE_ENV === "production") {
 app.listen(port, () => console.log(`The app is running on Port : ${port}`));
 // Mongoose server connection runs without any issues
 // Next create the schema in models/posts.js
+
+// DEPLOYED AND FULLY CRUDABLE
