@@ -27,10 +27,18 @@ const connection = mongoose.connection;
 connection.once("open", () =>
   console.log("Mongoose connnection established successfully")
 );
+mongoose.connection.on("error", (err) => {
+  console.log("MongoDB connection error: ", err);
+});
 
 // this is the middleware, and will be imported from the posts.js in routes folder
 const postsRouter = require("./routes/posts");
 app.use("/posts", postsRouter);
+
+// DEPLOYMENT conditional
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("mumblr/build"));
+}
 
 app.listen(port, () => console.log(`The app is running on Port : ${port}`));
 // Mongoose server connection runs without any issues
