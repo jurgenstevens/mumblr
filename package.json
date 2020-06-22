@@ -6,11 +6,11 @@
   "scripts": {
     "server": "nodemon",
     "build": "cd mumblr && npm run build",
-    "install-mumblr": "cd mumblr && npm run build",
+    "install-mumblr": "cd mumblr && npm install",
     "heroku-postbuild": "npm run install-mumblr && npm run build ",
     "start": "node server.js",
-    "mumblr": "npm start --prefix mumblr",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "mumblr": "cd mumblr && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run mumblr\""
   },
   "repository": {
     "type": "git",
